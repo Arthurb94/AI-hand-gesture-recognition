@@ -41,16 +41,16 @@ def display_prediction(prediction):
 
 def action(mouv,key):
     if mouv=="Jul" and key==ord('a') :
-        audio_file = "Systeme_final/ressources/jul.mp3"
+        audio_file = "ressources/jul.mp3"
         return_code = subprocess.call(["afplay", audio_file])
 
     if mouv=="Rock'n Roll" and key==ord('a') :
-        audio_file = "Systeme_final/ressources/yeah.mp3"
+        audio_file = "ressources/yeah.mp3"
         return_code = subprocess.call(["afplay", audio_file])
         
     if mouv=="Hello" and key==ord('a') :
         #  affichage de l'image correspondant au mvnt
-        img = cv2.imread('Systeme_final/ressources/hello.jpeg',1) 
+        img = cv2.imread('ressources/hello.jpeg',1) 
         cv2.imshow('hello',img)
         cv2.waitKey(0)
         cv2.destroyWindow('hello')
@@ -60,7 +60,7 @@ def action(mouv,key):
         webbrowser.open("http://google.co.uk")
         
 #Load the saved model
-model = models.load_model('Systeme_final/model_final.h5')
+model = models.load_model(filepath = "Model/model_final.h5")
 
 # lance la capture de vidéo de la webcam
 cap= cv2.VideoCapture(0)

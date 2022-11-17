@@ -1,0 +1,11 @@
+pip install os
+pip install csv
+pip install numpy
+pip install mediapipe
+pip install pandas
+pip install cv2
+pip install subprocess
+pip install webbrowser
+pip install keras
+pip install tensorflow
+pip install matplotlib 

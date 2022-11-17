@@ -44,4 +44,4 @@ model.fit(arr_x_train, y_train,validation_data=(arr_x_test,y_test), epochs=10, v
 
 score = model.evaluate(arr_x_test, y_test, verbose=0)
 print (score)
-model.save('model_final.h5')
+model.save('Model/model_final.h5')
